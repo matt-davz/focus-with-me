@@ -19,18 +19,106 @@
         </div>
     </head>
     <main>
-        <div class="time-container">
+        <div class="time container">
             <div class="button-container">
                  <button id="focus-btn" class="button phase"></button>
                  <button id="short-break-btn" class="button phase"></button> 
                 <button id="long-break-btn" class="button phase"></button>
             </div>
+            <div class="timer">
+                <h1 id="timer"></h1>
+            </div>
+            <div class="time-controller-container">
+                <button id="start-btn" class="button start"></button>
+                <img src="" alt="">
+            </div>
         </div>
-        <div class="timer">
-            <h1 id="timer"></h1>
+        <div class="settings ui container">
+            <div class="ui-header">
+                <div class="exit-container">
+                    <!-- exit div -->
+                </div>
+            </div>
+            <div class="choice-column">
+                <h3>Timers</h3>
+                <h3>Sounds</h3>
+            </div>
+            <div id="timers-options" class="option-container">
+                <div class="option-columns">
+                    <label for="">Focus</label>
+                    <input class="input-times" type="number" value="25">
+                </div>
+                <div class="option-columns">
+                    <label for="">Short Break</label>
+                    <input class="input-times" type="number" value="5">
+                </div>
+                <div class="option-columns">
+                    <label for="">Long Break</label>
+                    <input class="input-times" type="number" value="10">
+                </div>
+            </div>
+            <div id="sounds-options" class="option-container">
+                <div class="row-one">
+                    <label for="">Select</label>
+                    <select name="" id="">
+                        <option value="">Alarm</option>
+                        <option value="">Bell</option>
+                        <option value="">Chime</option>
+                        <option value="">Bird</option>
+                    </select>
+                </div>
+                <div class="row-two">
+                    <div class="on-off-toggle">
+                        <div class="circle"></div>
+                        <h4></h4>
+                    </div>
+                </div>
+                <div class="row-three">
+                    <label for=""></label>
+                    <div class="slide-container">
+                        <input type="range" min="0" max="100" value="50" id="music-volume-slider" class="volume">
+                    </div>
+                </div>
+            </div>
+            <div class="ui-footer">
+                <button>Reset all</button>
+                <button>Close</button>
+                <button>Save Changes</button>
+            </div>
         </div>
-        <div class="time-controller-container">
-            <button id="start-btn" class="button start"></button>
+        <div class="mixer ui container">
+            <div class="ui-header">
+                <h2>More Sound</h2>
+                <img src="" alt="">
+                <div class="exit-container">
+                    <!-- exit div -->
+                </div>
+            </div>
+            <div class="more-sounds">
+                <label for="">Keyboard</label>
+                <div class="on-off-toggle">
+                    <div class="circle"></div>
+                    <h4></h4>
+                </div>
+                <div class="slide-container">
+                    <input type="range" min="0" max="100" value="50" id="music-volume-slider" class="volume">
+                </div>
+            </div>
+            <div class="more-sounds">
+                <label for="">Bird Chirping</label>
+                <div class="on-off-toggle">
+                    <div class="circle"></div>
+                    <h4></h4>
+                </div>
+                <div class="slide-container">
+                    <input type="range" min="0" max="100" value="50" id="music-volume-slider" class="volume">
+                </div>
+            </div>
+            <div class="ui-footer">
+                <button>Reset all</button>
+                <button>Close</button>
+                <button>Save Changes</button>
+            </div>
         </div>
     </main>
     <footer>
@@ -41,13 +129,13 @@
                  <div id="bar-three" class="bar"></div>
                  <div id="bar-four" class="bar"></div>
             </div>
-            <button></button>
+            <button class="play"></button>
             <div class="slide-container">
                 <input type="range" min="0" max="100" value="50" id="music-volume-slider" class="volume">
             </div>
-            <div class="mixer-container">
-                <img src="" alt="">
-            </div>
+        </div>
+        <div class="mixer-container">
+            <img src="" alt="">
         </div>
     </footer>
 </body>
