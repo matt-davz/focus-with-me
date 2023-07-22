@@ -224,7 +224,7 @@ main{
     font-size: 1.5rem;
 }
 #timers-options{
-    display: none;
+    display: flex;
 }
 
 .input-times{
@@ -246,7 +246,7 @@ main{
 
 
 #sounds-options{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
 
