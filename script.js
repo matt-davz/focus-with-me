@@ -16,26 +16,26 @@ function openMixer(){
 
 const timersBtn = document.getElementById('timers-button');
 const timersOptions = document.getElementById('timers-options');
-const soundsBtn = document.getElementById('sounds-button')
-const soundsOptions = document.getElementById('sounds-options');
+const alertsBtn = document.getElementById('alerts-button')
+const alertsOptions = document.getElementById('alerts-options');
 
 function openTimers(){
     timersBtn.style.textDecoration = "underline";
-    soundsBtn.style.textDecoration = "none";
+    alertsBtn.style.textDecoration = "none";
     timersOptions.style.display = "flex";
-    soundsOptions.style.display= "none";
+    alertsOptions.style.display= "none";
 }
 
 timersBtn.addEventListener('click',openTimers);
 
-function openSounds(){
+function openAlerts(){
     timersBtn.style.textDecoration = "none";
-    soundsBtn.style.textDecoration = "underline";
+    alertsBtn.style.textDecoration = "underline";
     timersOptions.style.display = "none";
-    soundsOptions.style.display= "flex";
+    alertsOptions.style.display= "flex";
 }
 
-soundsBtn.addEventListener('click',openSounds);
+alertsBtn.addEventListener('click',openAlerts);
 
 function exit(){
     settings.style.display = "none";

@@ -183,7 +183,7 @@ main{
 .settings{
     display:none;
 }
-#timers-button:hover, #sounds-button{
+#timers-button:hover, #alerts-button{
     cursor: pointer;
 }
 #timers-button{
@@ -246,13 +246,13 @@ main{
 }
 
 
-#sounds-options{
+#alerts-options{
     display: none;
     flex-direction: column;
     justify-content: space-around;
 
 }
-#sounds-options select{
+#alerts-options select{
     height: 3rem;
     background-color: transparent;
     border: solid;
@@ -262,18 +262,13 @@ main{
     font-size: 1.5rem;
 }
 
-#sounds-options select option{
-    background-color: pink;
-}
-.row-one, .row-three{
+
+.row{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.row-two{
-    display: flex;
-    gap: 0.5rem;
-}
+
 
 .ui-footer{
     height: 10%;

@@ -47,7 +47,7 @@
             <div class="ui-main">
                 <div class="choice-column">
                     <h2 id="timers-button">Timers</h2>
-                    <h2 id="sounds-button">Sounds</h2>
+                    <h2 id="alerts-button">Alerts</h2>
                 </div>
                 <div id="timers-options" class="option-container">
                     <div class="option-columns">
@@ -63,8 +63,15 @@
                         <input class="input-times" type="number" value="10">
                     </div>
                 </div>
-                <div id="sounds-options" class="option-container">
-                    <div class="row-one">
+                <div id="alerts-options" class="option-container">
+                    <div class="row">
+                        <label for="">Alerts</label>
+                        <div class="on-off-toggle">
+                            <div class="circle"></div>
+                            <p id="on-off">off</p>
+                        </div>
+                    </div>
+                    <div class="row">
                         <label for="">Select Alert Sound:</label>
                         <select name="" id="">
                             <option disabled selected value="Alarm">Alarm</option>
@@ -73,14 +80,7 @@
                             <option value="Bird">Bird</option>
                         </select>
                     </div>
-                    <div class="row-two">
-                        <div class="on-off-toggle">
-                            <div class="circle"></div>
-                            <p id="on-off">off</p>
-                        </div>
-                        <label for="">Play Sound When Timer Finishes</label>
-                    </div>
-                    <div class="row-three">
+                    <div class="row">
                         <label for="">Alert Volume:</label>
                        
                             <input type="range" min="0" max="100" value="50" id="music-volume-slider" class="volume">
