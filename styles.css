@@ -193,6 +193,7 @@ main{
     height: 80%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .choice-column{
@@ -206,17 +207,17 @@ main{
 
 .option-container{
     display:flex;
-    
+    height: 80%;
+    width: 60%;
     justify-content: space-around;
 }
 
 .option-columns{
-    padding-top: 2rem;
+    
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    width: 30%;
     gap: 0.5rem;
 }
 .ui-main label{
