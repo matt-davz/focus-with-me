@@ -73,7 +73,7 @@ toggles.forEach(element => {
           off.style.marginRight = "0";
           off.style.marginLeft = "0.5rem";
           off.innerHTML = "On"
-          parentToggle.style.backgroundColor = "blue";
+          parentToggle.style.backgroundColor = "#1C85E5";
           parentToggle.dataset.toggled = "true";
         } else {
           // State: ON

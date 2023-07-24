@@ -28,12 +28,20 @@ body{
         padding-top: 1rem;
     }
 
-    .button-container{
-       
-        grid-auto-flow: row !important;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: none !important;
-        
+    .button-container{   
+    gap: 0.25rem !important;
+    }
+
+    #start-btn{
+        width: fit-content !important;
+    }
+
+    .time button{
+        width: 7rem !important;
+    }
+
+    .time button h2{
+        font-size: 1rem;
     }
 
     .setting-contianer h3{
