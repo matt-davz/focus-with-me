@@ -54,6 +54,28 @@ body{
         height: 1.75rem !important;
         width: 1.75rem !important ;
     }
+
+    .container{
+        min-width: 0rem !important;
+    }
+
+    .ui-main{
+        flex-direction: column !important;
+    }
+    
+    .choice-column{
+        flex-direction: row !important;
+    }
+
+    #mixer-main{
+        width: 80% !important;
+    }
+
+    
+
+    .ui-footer, .ui-header{
+        padding: 0 1rem !important;
+    }
 }
 /* typography */
 .h0{
