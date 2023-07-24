@@ -88,3 +88,14 @@ toggles.forEach(element => {
       }
     });
   });
+
+  const musicContainer = document.querySelector('.music-container');
+
+  musicContainer.addEventListener('click', (event) => {
+      const isPopoutClicked = event.target.closest('.popout');
+      if (!isPopoutClicked) {
+          musicContainer.classList.toggle('active');
+          const toggleValue = musicContainer.getAttribute('data-toggle') === 'false' ? 'true' : 'false';
+          musicContainer.setAttribute('data-toggle', toggleValue);
+      }
+  });
