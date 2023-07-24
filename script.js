@@ -51,3 +51,40 @@ exitClick.forEach(element => {
 });
 settingClick.addEventListener('click',openSettings);
 mixerClick.addEventListener('click',openMixer)
+
+
+// on-off toggle //
+
+const toggles = document.querySelectorAll('.on-off-toggle');
+
+toggles.forEach(element => {
+    element.addEventListener('click', (event) => {
+      const clickedElement = event.target;
+      const parentToggle = clickedElement.closest('.on-off-toggle');
+      
+      if (parentToggle) {
+        const circle = parentToggle.querySelector('.circle');
+        const off = parentToggle.querySelector('.off');
+        
+        if (parentToggle.dataset.toggled === "false") {
+          // Initial state or state: OFF
+          circle.style.order = "2";
+          off.style.order = "1";
+          off.style.marginRight = "0";
+          off.style.marginLeft = "0.5rem";
+          off.innerHTML = "On"
+          parentToggle.style.backgroundColor = "blue";
+          parentToggle.dataset.toggled = "true";
+        } else {
+          // State: ON
+          circle.style.order = "1";
+          off.style.order = "2";
+          off.style.marginRight = "0.5rem";
+          off.style.marginLeft = "0";
+          off.innerHTML = "Off"
+          parentToggle.style.backgroundColor = "var(--background-gray)";
+          parentToggle.dataset.toggled = "false";
+        }
+      }
+    });
+  });

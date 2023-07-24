@@ -71,8 +71,6 @@ body{
         width: 80% !important;
     }
 
-    
-
     .ui-footer, .ui-header{
         padding: 0 1rem !important;
     }
@@ -363,7 +361,7 @@ main{
 }
 /* on-off toggle */
 .on-off-toggle{
-    
+    cursor: pointer;
     height: 2rem;
     width: 4rem;
     background-color: var(--background-gray);
@@ -371,20 +369,32 @@ main{
     padding: 0 0.13rem;
     display:inline-flex;
     align-items: center;
-    
-    gap: 0.5rem;
-
+    justify-content: space-between;
 }
 
-.on-off-toggle:hover{
-    cursor: pointer;
+
+
+.off{
+    margin-right: 0.5rem;
 }
 
 .circle{
+    justify-self: start;
     height: 1.8rem;
     aspect-ratio: 1;
     border-radius: 1rem;
     background-color: white;
+}
+
+.circle-on{
+    order: 2;
+    transition: order 1s ease;
+}
+
+.p-on{
+
+    order: 1;
+    transition: order 1s ease;
 }
 
 
