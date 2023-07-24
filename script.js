@@ -130,3 +130,13 @@ dropDownContent.forEach((elm) => {
         })
     })
 })
+
+const slider = document.getElementById('music-volume-slider'); 
+
+// need to add more sliders
+
+slider.addEventListener('mousemove', function(){
+    var x = slider.value;
+    var color = `linear-gradient(90deg, white ${x}%, #B5B5B5 ${x}%)`
+    slider.style.background = color;
+})
