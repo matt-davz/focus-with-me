@@ -20,7 +20,41 @@ body{
     height: 100vh;
     color: white;
 }
+/* media queries */
+@media  (max-width: 767.98px){
+    body{
+        padding:0 1rem;
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+    }
 
+    .button-container{
+       
+        grid-auto-flow: row !important;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: none !important;
+        
+    }
+
+    .setting-contianer h3{
+        display: none !important;
+    }
+
+
+    .icon{
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+
+    .music-icon-container{
+        height: 2rem !important;
+    }
+
+    .sound-icon{
+        height: 1.75rem !important;
+        width: 1.75rem !important ;
+    }
+}
 /* typography */
 .h0{
     font-size: 6rem;
@@ -75,13 +109,18 @@ header{
     height: fit-content;
 }
 
+.setting-contianer h3{
+    display: flex;
+    align-items: center;
+}
+
 .setting-contianer:hover{
     cursor: pointer;
 }
 .setting-icon{
     width:2rem;
     aspect-ratio: 1;
-    background-image: url(/assets/setting-filled.svg);
+    background-image: url(./assets/setting-filled.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -103,8 +142,8 @@ header{
     border: white solid;
     border-radius: 5rem;
     color: white;
-    width: 12rem;
-   
+    width: 13rem;
+    cursor: pointer;
 }
 
 .time button h2{
@@ -115,9 +154,7 @@ header{
 #start-btn{
     width: fit-content;
 }
-.time button:hover{
-    cursor: pointer;
-}
+
 .time button:active{
     background-color: white;
     color: black;
@@ -334,6 +371,7 @@ main{
     height: 10%;
     display: flex;
     justify-content: end;
+    padding: 0 3rem;
 }
 
 .exit-container{
@@ -371,7 +409,7 @@ main{
 .mixer2{
     width:2rem;
     aspect-ratio: 1;
-    background-image: url(/assets/mixer-vertical\ \(1\).svg);
+    background-image: url(./assets/mixer-vertical\ \(1\).svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -408,7 +446,7 @@ footer{
 }
 
 .mixer{
-    background-image: url(/assets/mixer-vertical\ \(1\).svg);
+    background-image: url(./assets/mixer-vertical\ \(1\).svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -465,7 +503,7 @@ footer{
 
 
 .play{
-    background-image: url(/assets/play.svg);
+    background-image: url(./assets/play.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -474,7 +512,7 @@ footer{
 .sound-icon{
     height: 2.5rem;
     width: 2.5rem;
-    background-image: url(/assets/sound-level-two.svg);
+    background-image: url(./assets/sound-level-two.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
