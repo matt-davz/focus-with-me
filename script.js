@@ -98,4 +98,35 @@ toggles.forEach(element => {
           const toggleValue = musicContainer.getAttribute('data-toggle') === 'false' ? 'true' : 'false';
           musicContainer.setAttribute('data-toggle', toggleValue);
       }
+
+      
   });
+
+
+
+// drop down menu //
+document.addEventListener('click', e => {
+    const isDropDownButton = e.target.matches("[data-dropdown-button]");
+    if (isDropDownButton) {
+        currentDropdown = e.target.closest('[data-dropdown]');
+        currentDropdown.classList.toggle('active');
+    } 
+
+
+});
+
+
+const dropDownContent = document.querySelectorAll('.dropdown-content')
+
+dropDownContent.forEach((elm) => {
+    elm.addEventListener('click', content => {
+        const clickedElement = content.target.closest('.dropdown-content');
+        clickedElement.classList.add('active');
+
+        let currentDropDown = content.target.closest('.dropdown-content.active');
+        document.querySelectorAll('.dropdown-content.active').forEach(element => {
+        if (element === currentDropDown) return;
+        element.classList.remove('active');
+        })
+    })
+})

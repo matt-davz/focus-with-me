@@ -73,12 +73,15 @@
                     </div>
                     <div class="row">
                         <label for="">Select Alert Sound:</label>
-                        <select name="" id="">
-                            <option disabled selected value="Alarm">Alarm</option>
-                            <option value="Bell">Bell</option>
-                            <option value="Chime">Chime</option>
-                            <option value="Bird">Bird</option>
-                        </select>
+                        <div class="dropdown" data-dropdown>
+                            <button class="select-btn" data-dropdown-button>Select <div class="caret"></div></button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-content">Alarm</div>
+                                <div class="dropdown-content">Bell</div>
+                                <div class="dropdown-content">Chime</div>
+                                <div class="dropdown-content">Bird</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <label for="">Alert Volume:</label>
