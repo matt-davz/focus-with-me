@@ -151,6 +151,8 @@ volume.forEach(elm => {
 
 const playButton = document.getElementById('play');
 const bars = document.querySelectorAll('.bar')
+const shortBar1 =document.getElementById('short1')
+const shortBar2 = document.getElementById('short2')
 playButton.addEventListener('click', play => {
   const button = play.target;
   if(button.classList.contains('play')){
@@ -159,6 +161,14 @@ playButton.addEventListener('click', play => {
   } else {
     button.classList.add('play');
     button.classList.remove('pause');
+  }
+
+  if(shortBar1.classList.contains('short')&&shortBar2.classList.contains('short')){
+    shortBar1.classList.remove('short');
+    shortBar2.classList.remove('short');
+  } else {
+    shortBar1.classList.add('short');
+    shortBar2.classList.add('short');
   }
 
   bars.forEach(elm => {
