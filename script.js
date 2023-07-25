@@ -150,7 +150,7 @@ volume.forEach(elm => {
 });
 
 const playButton = document.getElementById('play');
-
+const bars = document.querySelectorAll('.bar')
 playButton.addEventListener('click', play => {
   const button = play.target;
   if(button.classList.contains('play')){
@@ -160,6 +160,16 @@ playButton.addEventListener('click', play => {
     button.classList.add('play');
     button.classList.remove('pause');
   }
+
+  bars.forEach(elm => {
+    
+    if(elm.classList.contains('animate')){
+        elm.classList.remove('animate')
+    } else {
+        elm.classList.add('animate')
+    }
+    
+  })
 })
 
 const speakerButton = document.getElementById('speaker');
