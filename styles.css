@@ -69,11 +69,12 @@ body{
 
     .ui-main{
         flex-direction: column !important;
-        
+        padding: ;
     }
     .option-container{
         gap: 1rem;
         width: 80% !important;
+        
     }
     .choice-column{
         flex-direction: row !important;
@@ -116,12 +117,20 @@ body{
     }
 
     .volume{
-        height: 0.8rem !important;
+        height: 0.6rem !important;
     }
 
     .volume::-webkit-slider-thumb{
-        height: 1rem !important;
-        width: 1rem !important;
+        height: 0.8rem !important;
+        width: 0.8rem !important;
+    }
+
+    .popout{
+        gap: 0.4rem !important;
+    }
+
+    .music-container.active .popout {
+        transform: translateX(0.4rem) !important;
     }
 }
 /* typography */
@@ -316,6 +325,7 @@ main{
     height: 80%;
     width: 60%;
     justify-content: space-around;
+    padding: 2rem 0; 
 }
 
 .option-columns{
@@ -686,6 +696,13 @@ footer{
     background-position: center center;
 }
 
+.pause{
+    background-image: url(assets/pause-outline.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+}
+
 .sound-icon{
     background-image: url(assets/speaker-2-24-filled\ \(1\).svg);
     background-repeat: no-repeat;
@@ -693,19 +710,27 @@ footer{
     background-position: center center;
 }
 
+.mute{
+    background-image: url(assets/speaker-off-24-filled.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 
 
 /* slider */
 
 .volume{
     -webkit-appearance: none;
-    height: 1.25rem;
+    height: 1rem;
     outline: none;
     background: linear-gradient(90deg, white 50%, #B5B5B5 50%);
     border-radius: 1rem;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
-
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
 
@@ -713,8 +738,8 @@ footer{
 .volume::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
-    height: 1.875rem;
-    width: 1.875rem;
+    height: 1.4rem;
+    width: 1.4rem;
     background-color: white;
     border-radius: 1rem;
     cursor: pointer;
@@ -723,9 +748,16 @@ footer{
 .slider::-moz-range-thumb{
     -webkit-appearance: none;
     appearance: none;
-    height: 1.875rem;
-    width: 1.875rem;
+    height: 1.4rem;
+    width: 1.4rem;
     background-color: white;
     border-radius: 1rem;
     cursor: pointer;
+}
+
+#speaker.mute + .volume{
+    transform: translateX(-10px);
+    opacity: 0;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    pointer-events: none;
 }

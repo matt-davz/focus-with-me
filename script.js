@@ -131,12 +131,48 @@ dropDownContent.forEach((elm) => {
     })
 })
 
-const slider = document.getElementById('music-volume-slider'); 
 
-// need to add more sliders
+const volume = document.querySelectorAll('.volume');
 
-slider.addEventListener('mousemove', function(){
-    var x = slider.value;
-    var color = `linear-gradient(90deg, white ${x}%, #B5B5B5 ${x}%)`
-    slider.style.background = color;
+volume.forEach(elm => {
+    elm.addEventListener('mousemove', event => {
+        const currentSlider = event.target.closest('.volume');
+        let x = currentSlider.value;
+        let color = `linear-gradient(90deg, white ${x}%, #B5B5B5 ${x}%)`
+        currentSlider.style.background = color;
+    });
+    elm.addEventListener('touchmove', event => {
+      const currentSlider = event.target.closest('.volume');
+      let x = currentSlider.value;
+      let color = `linear-gradient(90deg, white ${x}%, #B5B5B5 ${x}%)`
+      currentSlider.style.background = color;
+  });
+});
+
+const playButton = document.getElementById('play');
+
+playButton.addEventListener('click', play => {
+  const button = play.target;
+  if(button.classList.contains('play')){
+    button.classList.remove('play');
+    button.classList.add('pause');
+  } else {
+    button.classList.add('play');
+    button.classList.remove('pause');
+  }
 })
+
+const speakerButton = document.getElementById('speaker');
+
+speakerButton.addEventListener('click', speaker => {
+  const button = speaker.target;
+  if(button.classList.contains('sound-icon')){
+    button.classList.remove('sound-icon');
+    button.classList.add('mute');
+  } else {
+    button.classList.add('sound-icon');
+    button.classList.remove('mute');
+  }
+  
+})
+
