@@ -1,4 +1,485 @@
+:root{
+    --background-gray: rgba(211,211,211,0.5)
+}
+
+
+html{
+    font-size: 16px;
+}
+
 body{
+    box-sizing: border-box;
     margin:0;
-    padding: 0;
+    padding: 3rem 4rem;
+    font-family: 'Manrope', sans-serif;
+    background-image: url(./assets/penthouse.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    height: 100vh;
+    color: white;
+}
+
+/* typography */
+.h0{
+    font-size: 6rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+h1{
+    font-size: 48px;
+    margin: 0;
+
+}
+
+h2{
+    font-size: 32px;
+    margin: 0;
+}
+
+h3{
+    font-size: 24px;
+    margin: 0;
+}
+
+h4{
+    font-size: 18px;
+    margin: 0;
+}
+
+p{
+    font-size: 16px;
+    margin: 0;
+}
+
+/* header */
+
+header{
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.logo-container{
+    text-shadow: 3px 5px 2px #474747
+}
+.logo-container h3{
+    text-align: right;
+    font-family: 'Caveat', cursive;
+    
+}
+.setting-contianer{
+    display: flex;
+    height: fit-content;
+}
+
+.setting-contianer:hover{
+    cursor: pointer;
+}
+.setting-icon{
+    width:2rem;
+    aspect-ratio: 1;
+    background-image: url(/assets/setting-filled.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-right:0.5rem
+}
+.setting-contianer h3{
+    background-color: var(--background-gray);
+    padding: 0.15rem;
+    border-radius: 0.5rem;
+}
+
+.icon-contianer{
+    height: fit-content;
+    width: fit-content;
+}
+/* button styles */
+.time button{
+    background-color: transparent;
+    border: white solid;
+    border-radius: 5rem;
+    color: white;
+    width: 12rem;
+   
+}
+
+.time button h2{
+    font-weight: 300;
+    margin: 0.5rem;
+}
+
+#start-btn{
+    width: fit-content;
+}
+.time button:hover{
+    cursor: pointer;
+}
+.time button:active{
+    background-color: white;
+    color: black;
+}
+/* main */
+main{
+    height: 85%;
+    display: flex;
+}
+.time{
+    
+    height: 50%;
+    
+    margin: auto;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap:2rem;
+   justify-content: center;
+}
+.timer{
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 25rem;
+    width: 100%;
+    min-width: 20rem;
+    height: 35%;
+    text-shadow: 3px 5px 2px #474747;
+    margin: 0 auto;
+}
+.time-controller-container{
+    display: flex;
+    justify-content: center;
+}
+.button-container{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr min-content 1fr;
+    gap: 1rem;
+    justify-content: center;
+}
+#focus-btn{
+    justify-self: end;
+}
+
+.container{
+    width: 100%;
+    max-width: 46.25rem;
+    min-width: 36rem;
+    height: 100%;
+    max-height: 30rem;
+    margin: auto;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+
+/* settings ui */
+.settings{
+    display:none;
+}
+#timers-button:hover, #sounds-button{
+    cursor: pointer;
+}
+#timers-button{
+    text-decoration: underline;
+}
+.ui-main{
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.choice-column{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    gap:2rem;
+    text-align: center;
+}
+
+.option-container{
+    display:flex;
+    
+    justify-content: space-around;
+}
+
+.option-columns{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 30%;
+    gap: 0.5rem;
+}
+.ui-main label{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+#timers-options{
+    display: none;
+}
+
+.input-times{
+    width: 80%;
+    background-color: transparent;
+    border: solid 1px white;
+    color: white;
+    height: 2rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.input-times::-webkit-inner-spin-button,
+.input-times::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+#sounds-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+#sounds-options select{
+    height: 3rem;
+    background-color: transparent;
+    border: solid;
+    color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#sounds-options select option{
+    background-color: pink;
+}
+.row-one, .row-three{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.row-two{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ui-footer{
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+
+#save{
+    border: solid white;
+}
+
+#reset{
+    background-color: transparent;
+    border: solid red;
+    color: red;
+}
+
+#reset:active{
+    background-color: red;
+    color: black;
+}
+
+
+.ui-btn {
+    height: 2rem;
+    border-radius: 1rem;
+    width: 7rem;
+}
+
+.ui-btn:hover{
+    cursor: pointer;
+}
+/* on-off toggle */
+.on-off-toggle{
+    
+    height: 2rem;
+    width: 4rem;
+    background-color: var(--background-gray);
+    border-radius: 1rem;
+    padding: 0 0.13rem;
+    display:inline-flex;
+    align-items: center;
+    
+    gap: 0.5rem;
+
+}
+
+.on-off-toggle:hover{
+    cursor: pointer;
+}
+
+.circle{
+    height: 1.8rem;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+
+/* x icon for exit */
+.ui-header{
+    height: 10%;
+    display: flex;
+    justify-content: end;
+}
+
+.exit-container{
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    
+}
+
+.exit-container:hover{
+    cursor: pointer;
+}
+.x-one,.x-two{
+    height: 3px;
+    background-color: white;
+    width: 1.8rem;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+}
+
+.x-one{
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.x-two{
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+/* mixer */
+.mixer-container{
+    display: none;
+}
+#mixer-header{
+    justify-content: space-between;
+}
+.mixer2{
+    width:2rem;
+    aspect-ratio: 1;
+    background-image: url(/assets/mixer-vertical\ \(1\).svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-right:0.5rem
+}
+.more-sound{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#mixer-main{
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.mixer-container input{
+    width: 100%;
+}
+.mixer-options{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+   
+/* footer */
+
+footer{
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mixer{
+    background-image: url(/assets/mixer-vertical\ \(1\).svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-right:0.5rem
+}
+
+.mixer:hover{
+    cursor: pointer;
+}
+
+.music-container{
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.music-icon-container{
+    
+    height: 2.5rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.bar{
+    border-radius: 1rem;
+    width: 0.3rem;
+    background-color: white;
+}
+
+#bar-one{
+    height: 85%;
+}
+#bar-two{
+    height: 70%;
+}
+#bar-three{
+    height: 100%;
+}
+#bar-four{
+    height: 90%;
+}
+
+.icon{
+    width: 3rem;
+    height: 3rem;
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+
+
+.play{
+    background-image: url(/assets/play.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.sound-icon{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-image: url(/assets/sound-level-two.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }

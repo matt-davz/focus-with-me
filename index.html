@@ -1,123 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Manrope:wght@200;300;600&display=swap" rel="stylesheet">   
+<link rel="stylesheet" href="./styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Focus With Me</title>
 </head>
 <body>
-    <head>
+    <header>
         <div class="logo-container">
-            <h3>focus with me</h3>
-            <p>by xxxx</p>
+            <h2>focus with me</h2>
+            <h3>by xxxx</h3>
         </div>
         <div class="setting-contianer">
-            <img src="" alt="">
-            <h4>settings</h4>
+            <div class="setting-icon"></div>
+            <h3>settings</h3>
         </div>
-    </head>
+    </header>
     <main>
-        <div class="time container">
+        <div class="time">
             <div class="button-container">
-                 <button id="focus-btn" class="button phase"></button>
-                 <button id="short-break-btn" class="button phase"></button> 
-                <button id="long-break-btn" class="button phase"></button>
+                 <button id="focus-btn" class="button phase"><h2>focus</h2></button>
+                 <button id="short-break-btn" class="button phase"><h2>short break</h2></button> 
+                <button id="long-break-btn" class="button phase"><h2>long break</h2></button>
             </div>
             <div class="timer">
-                <h1 id="timer"></h1>
+                <h1 class="h0" id="timer">25:00</h1>
             </div>
             <div class="time-controller-container">
-                <button id="start-btn" class="button start"></button>
+                <button id="start-btn" class="button start"><h2>start</h2></button>
                 <img src="" alt="">
             </div>
         </div>
         <div class="settings ui container">
             <div class="ui-header">
                 <div class="exit-container">
-                    <!-- exit div -->
+                    <div class="x-one"></div>
+                    <div class="x-two"></div>
                 </div>
             </div>
-            <div class="choice-column">
-                <h3>Timers</h3>
-                <h3>Sounds</h3>
-            </div>
-            <div id="timers-options" class="option-container">
-                <div class="option-columns">
-                    <label for="">Focus</label>
-                    <input class="input-times" type="number" value="25">
+            <div class="ui-main">
+                <div class="choice-column">
+                    <h2 id="timers-button">Timers</h2>
+                    <h2 id="sounds-button">Sounds</h2>
                 </div>
-                <div class="option-columns">
-                    <label for="">Short Break</label>
-                    <input class="input-times" type="number" value="5">
-                </div>
-                <div class="option-columns">
-                    <label for="">Long Break</label>
-                    <input class="input-times" type="number" value="10">
-                </div>
-            </div>
-            <div id="sounds-options" class="option-container">
-                <div class="row-one">
-                    <label for="">Select</label>
-                    <select name="" id="">
-                        <option value="">Alarm</option>
-                        <option value="">Bell</option>
-                        <option value="">Chime</option>
-                        <option value="">Bird</option>
-                    </select>
-                </div>
-                <div class="row-two">
-                    <div class="on-off-toggle">
-                        <div class="circle"></div>
-                        <h4></h4>
+                <div id="timers-options" class="option-container">
+                    <div class="option-columns">
+                        <label class="options" for="">Focus</label>
+                        <input class="input-times" type="number" value="25">
+                    </div>
+                    <div class="option-columns">
+                        <label class="options" for="">Short Break</label>
+                        <input class="input-times" type="number" value="5">
+                    </div>
+                    <div class="option-columns">
+                        <label class="options" for="">Long Break</label>
+                        <input class="input-times" type="number" value="10">
                     </div>
                 </div>
-                <div class="row-three">
-                    <label for=""></label>
-                    <div class="slide-container">
-                        <input type="range" min="0" max="100" value="50" id="music-volume-slider" class="volume">
+                <div id="sounds-options" class="option-container">
+                    <div class="row-one">
+                        <label for="">Select Alert Sound:</label>
+                        <select name="" id="">
+                            <option disabled selected value="Alarm">Alarm</option>
+                            <option value="Bell">Bell</option>
+                            <option value="Chime">Chime</option>
+                            <option value="Bird">Bird</option>
+                        </select>
+                    </div>
+                    <div class="row-two">
+                        <div class="on-off-toggle">
+                            <div class="circle"></div>
+                            <p id="on-off">off</p>
+                        </div>
+                        <label for="">Play Sound When Timer Finishes</label>
+                    </div>
+                    <div class="row-three">
+                        <label for="">Alert Volume:</label>
+                       
+                            <input type="range" min="0" max="100" value="50" id="music-volume-slider" class="volume">
+                        
                     </div>
                 </div>
             </div>
+            
             <div class="ui-footer">
-                <button>Reset all</button>
-                <button>Close</button>
-                <button>Save Changes</button>
+                <button class="ui-btn" id="reset">Reset all</button>
+                <button class="ui-btn" id="save">Save Changes</button>
             </div>
         </div>
-        <div class="mixer ui container">
-            <div class="ui-header">
-                <h2>More Sound</h2>
-                <img src="" alt="">
+        <div class="mixer-container container">
+            <div id="mixer-header" class="ui-header">
+                <div class="more-sound">
+                    <h2>More Sound</h2>
+                    <div class="mixer2"></div>
+                </div>
                 <div class="exit-container">
-                    <!-- exit div -->
+                    <div class="x-one"></div>
+                    <div class="x-two"></div>
                 </div>
             </div>
-            <div class="more-sounds">
-                <label for="">Keyboard</label>
-                <div class="on-off-toggle">
-                    <div class="circle"></div>
-                    <h4></h4>
-                </div>
-                <div class="slide-container">
+            <div id="mixer-main" class="ui-main">
+                <div class="mixer-options">
+                    <label for="">Keyboard</label>
+                    <div class="on-off-toggle">
+                        <div class="circle"></div>
+                        <p>off</p>
+                    </div>
+                </div>   
+                
                     <input type="range" min="0" max="100" value="50" id="music-volume-slider" class="volume">
-                </div>
-            </div>
-            <div class="more-sounds">
-                <label for="">Bird Chirping</label>
-                <div class="on-off-toggle">
-                    <div class="circle"></div>
-                    <h4></h4>
-                </div>
-                <div class="slide-container">
+                
+                 
+                    <div class="mixer-options">
+                        <label for="">Bird Chirping</label>
+                        <div class="on-off-toggle">
+                            <div class="circle"></div>
+                            <p>off</p>
+                        </div>
+                    </div>
+                  
+                
                     <input type="range" min="0" max="100" value="50" id="music-volume-slider" class="volume">
-                </div>
+                
+                
             </div>
+            
             <div class="ui-footer">
-                <button>Reset all</button>
-                <button>Close</button>
-                <button>Save Changes</button>
+                <button id="reset" class="ui-btn" >Reset all</button>
+                <button id="save" class="ui-btn" >Save Changes</button>
             </div>
         </div>
     </main>
@@ -129,14 +144,13 @@
                  <div id="bar-three" class="bar"></div>
                  <div id="bar-four" class="bar"></div>
             </div>
-            <button class="play"></button>
+            <div class="play icon"></div>
+            <div class="sound-icon icon"></div>
             <div class="slide-container">
                 <input type="range" min="0" max="100" value="50" id="music-volume-slider" class="volume">
             </div>
         </div>
-        <div class="mixer-container">
-            <img src="" alt="">
-        </div>
+        <div id="mixer" class="mixer icon"></div>
     </footer>
 </body>
 </html>
